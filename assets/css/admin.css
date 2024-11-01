@@ -1,0 +1,154 @@
+#wpwrap {
+  background-color: #f1f1f1;
+}
+
+.ck, .ck * {
+  font-size: 1em;
+}
+
+.wps-surveys {
+  padding: 1em 1em 1em 0;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.wps-surveys * {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.wps-surveys input,
+.wps-surveys .html-editor-container *,
+.wps-surveys textarea {
+  user-select: text !important;
+  -moz-user-select: text !important;
+  -webkit-user-select: text !important;
+  -ms-user-select: text !important;
+}
+
+.wps-surveys input, .wps-surveys textarea, .wps-surveys button {
+  border-radius: 0 !important;
+}
+
+.wps-surveys .survey-element-id {
+  font-size: 90%;
+  position: relative;
+}
+
+.wps-surveys .survey-element-id::before {
+  content: "id: ";
+  position: absolute;
+  top: 1px;
+}
+
+.wps-surveys .wps-button-copy {
+  display: none;
+  position: absolute;
+  top: 7px;
+  right: 0;
+  cursor: pointer;
+  color: white;
+  padding: 3px 7px;
+  z-index: 10;
+}
+
+.wps-surveys .published .wps-button-copy {
+  display: block;
+  background-color: rgba(0,0,0,.25);
+}
+
+.wps-surveys *:hover > .wps-button-copy, .wps-surveys .wps-button-copy.flash {
+  display: block;
+  background-color: rgba(0,0,0,.5);
+}
+
+.wps-surveys .wps-button-info, .wps-surveys .wps-button-info.flash {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.wps-surveys .wps-button-copy:hover, .wps-surveys .wps-button-copy.flash {
+  text-decoration: underline dotted;
+  background-color: rgba(0,0,0,.85);
+}
+
+.wps-surveys .wps-button-copy:hover::after,
+.wps-surveys .wps-button-copy.flash::after,
+.wps-surveys .wps-button-info:hover::after,
+.wps-surveys .wps-button-info.flash::after {
+  content: attr(description);
+  position: absolute;
+  top: 27px;
+  width: 230px;
+  padding: .5em;
+  text-align: center;
+  right: 0px;
+  background-color: rgba(0,0,0,.85);
+  color: white;
+  z-index: 10000;
+}
+
+.wps-surveys .wps-button-info:hover::after,
+.wps-surveys .wps-button-info.flash::after {
+  width: 400px;
+}
+
+.wps-surveys .survey-element-id input {
+  background: transparent;
+  border-width: 0 0 1px 0;
+  width: 100%;
+  padding-left: 1.5em;
+}
+
+.wps-surveys .wps-list-item {
+  position: relative;
+  /* height: 35px; */
+}
+
+.wps-surveys .wps-list-item .order,
+.wps-surveys .wps-list-item .actions {
+  position: absolute;
+  padding: 7px 0;
+}
+
+.wps-surveys .wps-list-item .order {
+    top: 0px; left: 15px; bottom: 0; width: 35px;
+}
+
+.wps-surveys .wps-list-item:hover .actions {
+  display: block;
+}
+
+.wps-surveys .wps-list-item:hover .actions:hover {
+  opacity: 1;
+}
+
+.wps-surveys .wps-list-item .actions {
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  opacity: .5;
+  top: 0; right: 0px; bottom: 0; width: 25px;
+}
+
+.wps-surveys .wps-list-item .actions * {
+  padding: 3px;
+}
+
+.wps-surveys .wps-list-item .item {
+  margin-left: 40px;
+}
+
+.wps-surveys .wps-list-item .item input {
+  width: 100%;
+  padding-right: 35px;
+}
+
+.wps-surveys .change-order-pan {
+  cursor: pointer
+}
